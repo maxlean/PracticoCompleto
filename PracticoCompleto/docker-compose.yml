@@ -1,0 +1,32 @@
+version: '3.8'
+
+services:
+  practicocompleto:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    environment:
+      SPRING_DATA_DB_USER_NAME: root
+      SPRING_DATA_DB_PASSWORD: root
+      SPRING_DATA_MONGODB_URI: mongodb://mongo-db:27017/ProyectoCompleto
+    depends_on:
+      - mongo-db 
+    networks:
+      - my-network
+
+  mongo-db:
+    image: mongo:latest
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo-data:/data/db
+    networks:
+      - my-network
+
+volumes:
+  mongo-data: 
+networks:
+  my-network: 
+    driver: bridge

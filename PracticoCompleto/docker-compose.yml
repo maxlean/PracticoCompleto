@@ -10,7 +10,7 @@ services:
     environment:
       SPRING_DATA_DB_USER_NAME: root
       SPRING_DATA_DB_PASSWORD: root
-      SPRING_DATA_MONGODB_URI: mongodb://mongo-db:27017/ProyectoCompleto
+      SPRING_DATA_MONGODB_URI: mongodb+srv://alkemyjava2clase6.2rmjcus.mongodb.net/ProyectoCompleto?retryWrites=true&w=majority&appName=AlkemyJava2Clase6
     depends_on:
       - mongo-db 
     networks:

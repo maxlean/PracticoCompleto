@@ -17,7 +17,7 @@ import java.util.function.Function;
 @Service
 public class JwtService {
 
-    private static final String SECRET_KEY = "bXlTdXBlclNlY3JldEtleUhlcmVJc1ZlcnlTZWN1cmUhMTIzNDU2"; // Base64 encoded secret key
+    //private static final String SECRET_KEY = "bXlTdXBlclNlY3JldEtleUhlcmVJc1ZlcnlTZWN1cmUhMTIzNDU2"; // Base64 encoded secret key
 
     public String getToken(UserDetails user) {
         return getToken(new HashMap<>(), user);
@@ -35,7 +35,7 @@ public class JwtService {
     }
 
     private Key getKey() {
-        byte[] keyBytes = Decoders.BASE64.decode(SECRET_KEY);
+        byte[] keyBytes = Decoders.BASE64.decode(System.getenv("SECRET_KEY")); // Use environment variable for secret key
         return Keys.hmacShaKeyFor(keyBytes);
     }
 

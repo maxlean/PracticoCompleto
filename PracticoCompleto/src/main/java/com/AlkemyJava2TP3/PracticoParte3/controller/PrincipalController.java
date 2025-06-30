@@ -11,9 +11,9 @@ public class PrincipalController {
     @Autowired
     private NotificacionService notificationService;
 
-    @PostMapping(value = "/principal")
+    @GetMapping("/index")
     public String principal() {
-        return "Principal endpoint accessed successfully";
+        return "index";
     }
 
     @GetMapping("/notificacion")

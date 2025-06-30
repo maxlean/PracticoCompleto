@@ -34,10 +34,6 @@ public class AuthServiceTest {
     private PasswordEncoder passwordEncoder;
     @Mock
     private JwtService jwtService;
-    @Mock
-    private User user;
-    @InjectMocks
-    private ProductoService productoService;
     @InjectMocks
     private AuthService authService;
 

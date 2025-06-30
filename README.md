@@ -25,13 +25,13 @@ Este proyecto es una aplicación desarrollada con **Spring Boot**, **MongoDB** y
 
 ## Estructura del proyecto
 
-src/main/java 
-├── com.example.proyecto 
-│ ├── controller # Controladores REST 
-│ ├── service # Lógica de negocio 
-│ ├── repository # Repositorios MongoDB 
-│ ├── model # Entidades y DTOs 
-│ └── ProyectoApplication # Clase principal
+src/main/java   
+├── com.example.proyecto  
+│ ├── controller # Controladores REST   
+│ ├── service # Lógica de negocio   
+│ ├── repository # Repositorios MongoDB   
+│ ├── model # Entidades y DTOs  
+│ └── ProyectoApplication # Clase principal  
 
 ## Configuración
 

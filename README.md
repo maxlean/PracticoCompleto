@@ -26,12 +26,18 @@ Este proyecto es una aplicación desarrollada con **Spring Boot**, **MongoDB** y
 ## Estructura del proyecto
 
 src/main/java   
-├── com.example.proyecto  
+├── com.AlkemyJava2TP3.PracticoParte3  
+| ├── config # configuraciones  
 │ ├── controller # Controladores REST   
 │ ├── service # Lógica de negocio   
 │ ├── repository # Repositorios MongoDB   
 │ ├── model # Entidades y DTOs  
 │ └── ProyectoApplication # Clase principal  
+├── com.AlkemyJava2TP3.PracticoParte3  
+src/main/test  
+├── com.AlkemyJava2TP3.PracticoParte3  
+│ ├── service # prueba de servicios # Test  
+│ └── ProyectoApplicationTests # Clase principal  
 
 ## Configuración
 

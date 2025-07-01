@@ -1,9 +1,9 @@
-name: Java CI
+name: Deploy Spring Boot Application
 
 on:
   push:
     branches:
-      - PruebasTest
+      - main
 
 jobs:
   build:
@@ -13,7 +13,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Set up JDK 17
+      - name: Set up JDK
         uses: actions/setup-java@v3
         with:
           java-version: '17'
@@ -21,3 +21,11 @@ jobs:
 
       - name: Build with Maven
         run: mvn clean install
+
+      - name: Run Application
+        env:
+          SPRING_DATA_DB_USER_NAME: ${{ secrets.SPRING_DATA_DB_USER_NAME }}
+          SPRING_DATA_DB_PASSWORD: ${{ secrets.SPRING_DATA_DB_PASSWORD }}
+          SPRING_DATA_MONGODB_URI: ${{ secrets.SPRING_DATA_MONGODB_URI }}
+          SECRET_KEY: ${{ secrets.SECRET_KEY }}
+        run: java -jar target/*.jar

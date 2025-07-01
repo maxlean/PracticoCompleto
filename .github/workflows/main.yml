@@ -28,4 +28,4 @@ jobs:
           SPRING_DATA_DB_PASSWORD: ${{ secrets.SPRING_DATA_DB_PASSWORD }}
           SPRING_DATA_MONGODB_URI: ${{ secrets.SPRING_DATA_MONGODB_URI }}
           SECRET_KEY: ${{ secrets.SECRET_KEY }}
-        run: java -jar target/*.jar
+        run: java -jar target/PracticoParte3-0.0.1.jar

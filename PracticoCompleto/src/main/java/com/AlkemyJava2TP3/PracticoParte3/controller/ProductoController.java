@@ -28,7 +28,7 @@ public class ProductoController {
         return new ResponseEntity<>(HttpStatus.CREATED);
     }
 
-    @PutMapping(value = "/udpate/{id}")
+    @PutMapping(value = "/update/{id}")
     public ResponseEntity<Void> actualizarProducto(@PathVariable String id, @RequestBody ProductoDTO productoDTO) {
         productoService.actualizarProducto(id, productoDTO);
         return new ResponseEntity<>(HttpStatus.OK);
